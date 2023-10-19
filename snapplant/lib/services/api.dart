@@ -14,9 +14,15 @@ Future<dynamic> analyzePlant(String imagePath) async {
   });
   try {
     final response = await dio.post(
-      "https://us-central1-potatoe-disease-classification.cloudfunctions.net/predict",
+      'http://192.168.137.1:5000/predict',
+      // "https://us-central1-potatoe-disease-classification.cloudfunctions.net/predict",
+      // 192.168.137.1
+      // 'http://192.168.137.1:5000/predict';
+
       data: formData,
     );
+    print("response from api");
+    print(response.data);
     return response.data;
   } catch (e) {
     debugPrint(
