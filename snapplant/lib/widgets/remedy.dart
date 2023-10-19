@@ -49,9 +49,9 @@ class _RemedyState extends State<Remedy> {
 
   void playAudio(type) async {
     late String audioUrl;
-    if (type == "late blight") {
+    if (type == "late_blight") {
       audioUrl = lateBlightAudio;
-    } else if (type == "early blight") {
+    } else if (type == "early_blight") {
       audioUrl = earlyBlightAudio;
     } else
       audioUrl = healthyAudio;
